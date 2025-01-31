@@ -1,0 +1,42 @@
+{
+  "name": "myComponent",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/myComponent.umd.js",
+  "module": "./dist/myComponent.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/myComponent.es.js",
+      "require": "./dist/myComponent.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "style": "./dist/style.css",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --config vite.dev.config.js",
+    "devOLD": "vite serve examples/dev",
+    "build:demo": "vite build examples/demo --config vite.demo.config.js"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.474.0",
+    "radix-vue": "^1.2.6",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite": "^5.4.9",
+    "vue": "^3.5.12",
+    "vue-json-pretty": "^2.4.0"
+  },
+  "author": "aura.town"
+}
